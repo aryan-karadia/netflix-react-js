@@ -8,6 +8,10 @@ const requests = {
     requestAction: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=28`,
     requestComedy: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=35`,
     requestUpcoming: `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=1`,
+    requestHorror: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=27`,
+    requestRomance: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=10749`,
+    requestMystery: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=9648`,
+    requestSciFi: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=878`,
 };
 
 export default requests;
