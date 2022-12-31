@@ -7,6 +7,7 @@ const Signup = () => {
     const [password, setPassword] = useState('')
     const { user, signUp } = UserAuth();
     const Navigate = useNavigate();
+    const [error, setError] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,7 +15,7 @@ const Signup = () => {
             await signUp(email, password)
             Navigate('/')
         } catch (error) {
-            console.log(error)
+            setError(error.message)
         }
     }
 
@@ -28,7 +29,7 @@ const Signup = () => {
                         <div className=' max-w-[450px] h-[600px] mx-auto bg-black/75 text-white rounded-lg'>
                             <div className='max-w-[320px] mx-auto py-16'>
                                 <h1 className='text-3xl font-bold '>Sign Up</h1>
-                                
+                                {error ? <p className='p-3 bg-red-400 mt-2'>{error}</p> : null}
                                 <form onSubmit={handleSubmit} className='w-full flex flex-col py-4'>
                                     <input onChange={(e) => setEmail(e.target.value)} className='p-3 my-2 bg-neutral-600 rounded' type="email" placeholder='Email' autoComplete='email'/>
                                     <input onChange={(e) => setPassword(e.target.value)} className='p-3 my-2 bg-neutral-600 rounded' type="password" placeholder='Password' autoComplete='current-password'/>
