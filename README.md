@@ -7,3 +7,4 @@ This clone uses a movie API from https://www.themoviedb.org/ to get all the movi
 ## TODO
 
 1. Connect Firestore cloud storage for user database (favourited movies)
+2. Create Account home page
