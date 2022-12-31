@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Movie from './Movie';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -13,12 +13,12 @@ const Row = ({title, fetchURL, rowID}) => {
 
     const scrollLeft = () => {
         const slider = document.getElementById('slider' + rowID)
-        slider.scrollLeft -= 1108
+        slider.scrollLeft -= 500
     }
 
     const scrollRight = () => {
         const slider = document.getElementById('slider' + rowID)
-        slider.scrollLeft += 1108
+        slider.scrollLeft += 500
     }
 
     return (
